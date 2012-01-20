@@ -1,3 +1,27 @@
+/******************
+ * 
+ * 
+    Copyright (C) 2012  Mustafa Neguib
+    Copyright (C) 2008-2012 MN Tech Solutions (www.mntechsolutions.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Also add information on how to contact you by electronic and paper mail.
+ * 
+ * 
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -15,8 +39,13 @@ using namespace std;
 
 /***********************
 MN Tech Solutions Search Engine Version 0.0
+
 MN-BOT Version 0.0
+
 Mustafa Neguib
+
+
+Please read the README file to get the basic information on what this app does
 ***********************/
 
 
@@ -37,16 +66,13 @@ struct hostent *he;
 struct in_addr *addr;
 string dataInput;
 string dataOutput;
-/*printf("Enter the domain name: ");
-scanf("%s",domainName);
-printf("\n");
-*/
 
 ifstream myReadFile;
  myReadFile.open(file1);
 int end=0;
 
-
+if(myReadFile.is_open())
+{
  while (!myReadFile.eof()) {
 
    getline(myReadFile,dataInput);
@@ -76,15 +102,24 @@ delete(domainName);
 domainName=NULL;
 }//end if
 
+//i am printing the data to the screen
 cout<<endl<<endl<<endl;
 cout<<dataOutput<<endl;
 
-}
+}//end while
+}//end if
+else
+{//no file exists
+cout<<endl<<"No input file exists. Please create a text file with a list of domain names each on a seperate line."<<endl;
+}//end else
+
 myReadFile.close();
 
 ofstream outFile;
-outFile.open(file, ios::out|ios::trunc);
+outFile.open(file, ios::out|ios::trunc);//i am truncating the file everytime i write it
 outFile<<dataOutput;
+
+outFile.close();
 
 return 0;
 }
