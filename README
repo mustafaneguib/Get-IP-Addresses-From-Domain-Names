@@ -25,6 +25,7 @@ Also add information on how to contact you by electronic and paper mail.
 The app gets a text files as input and gets the ip-addresses of the domain names and saves them out to another file. This app has been developed for those who want to keep a backup of website's ip-addresses just incase the SOPA and/or PIPA get passed, and they can not access their favorite websites by using the domain names. Then the ip-addresses will come to the rescue.
 This is an open source project and the license is given above and you may further work on developing this project and use it in your project, however 
 follow the rules and regulations of the license and abide by them.
+This app currently works only on Linux, and i have tested it on Ubuntu 11.04. You may port it to other platforms.
 
 The files contained in this project are as follows:
 
