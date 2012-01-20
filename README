@@ -40,6 +40,8 @@ At the moment, we have some domain names in the input file, and have also upload
 
 Since this app is being released as an open source app, you are allowed to modify this app in any way as you like, but do follow the rules and regulations set by the open source licence. Also you may update the file domainnames.txt and add more domain names to the file. Remember, this app is for every one, and this will act as a database for the IP-Address of the domain names just incase the SOPA and/or PIPA get passed and websites get their dns records messed up with. Even though the dns records get messed up, we can still access those websites using their IP-Addresses as long as the server hosting the website is still online. I recommend you to fork this project and imporve this app, and also add more domain names to the input file.
 
+The file getip is the executable file compiled on Ubuntu 11.04. Run the file in the terminal to start the app.
+
 We have to protect ourselves against the SOPA and PIPA and have to protect our interests.
 
 
